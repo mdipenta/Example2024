@@ -12,6 +12,7 @@ def getGit(directory):
     return pydriller.Git(directory)
 
 def runCmdList(commands):
+    """ This method runs a command """
     try:
         x = subprocess.check_output(commands)
         lines=str(x.decode("latin-1",errors='ignore')).splitlines()
